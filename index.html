@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .audio-sample {
+      margin-bottom: 20px;
+    }
+    .audio-sample h3 {
+      margin-bottom: 5px;
+    }
+    audio {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Audio Comparison</h1>
+
+</body><h3>Same Speaker Resynthesis</h3>
+        <p>
+            Here, the decoder is conditionned with the same speaker and style as the input speech.
+        </p>
+        <div class="table-responsive pt-0" id="resyn-read">
+            <table style="text-align: center" class="table table-hover">
+              <thead>
+                <tr>
+                  <th style="text-align: center">Style</th>
+                  <th style="text-align: center">Original</th>
+                  <th style="text-align: center">Encodec 8</th>
+                  <th style="text-align: center">FACodec</th>
+                  <th style="text-align: center">V1/2000_E/S+E</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>default</td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/ground_truth/ex04_default_emphasis_00180_gt.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/encodec_8/ex04_default_emphasis_00180_gen.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/facodec/ex04_default_emphasis_00180_gt_rec.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/v1/ex04_default_emphasis_00180_genHubert.wav"></audio></td>
+                </tr>
+                <tr>
+                  <td> default </td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/ground_truth/ex04_default_emphasis_00181_gt.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/encodec_8/ex04_default_emphasis_00181_gen.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/facodec/ex04_default_emphasis_00181_gt_rec.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/v1/ex04_default_emphasis_00181_genHubert.wav"></audio></td>
+</html>
+                <tr>
+                <td> singing </td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/ground_truth/ex03_singing_00001_s000_gt.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/encodec_8/ex03_singing_00001_s000_gen.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/facodec/ex03_singing_gt_rec.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/v1/ex03_singing_00001_s000_genHubert.wav"></audio></td>
+                </tr>
+                <tr>
+                <td> singing </td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/ground_truth/ex02_singing_00001_s000_gt.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/encodec_8/ex02_singing_00001_s000_gen.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/facodec/ex02_singing_gt_rec.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/same_speaker/v1/ex02_singing_00001_s000_genHubert.wav"></audio></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container float-div">
+        <h3>Out-of-domain Speaker Resynthesis</h3>
+        <p>
+            In this section, the vocoder is asked to reconstruct an expressive sample from
+            Expresso, but using a speaker voice that is outside of the expresso dataset (LJ
+            voice), and was therefore never recorded with this particular expression.
+        </p>
+        <p>
+            This tests whether the Expresso styles can be generalized outside of the small
+            set of 4 speakers to standard TTS voices. Note that the LJ voice can be made to
+            laugh and whisper and to a certain extent change it's tone of voice according to
+            the required expressive style.
+        </p>
+        <p>
+            Whereas HuBERT units are speaker independant and can be used to resynthetize a
+            message in a target voice that is different from the input voice, Encodec units
+            represent their inputs hollistically with all their acoustic characteristics
+            including voice and therefore cannot perform voice transfer. This is why we only
+            present results with Hubert models.
+        </p>
+        <div class="table-responsive pt-0" id="resyn-read">
+            <table style="text-align: center" class="table table-hover">
+              <thead>
+                <tr>
+                  <th style="text-align: center">Style</th>
+                  <th style="text-align: center">Original</th>
+                  <th style="text-align: center">FACodec</th>
+                  <th style="text-align: center">V1/2000_E/S+E</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>singing</td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_lj_speaker/ground_truth/ex03_singing_00001_s000_gt.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_lj_speaker/facodec/ex03_singing_00001_s000_gen.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_lj_speaker/V1/ex03_singing_00001_s000_gen.wav"></audio></td>
