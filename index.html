@@ -25,17 +25,23 @@
   <h1>Audio Comparison</h1>
 
 </body><h3>Same Speaker Resynthesis</h3>
-        <p> Here, resynthesis results are presented for three classes of models: Encodec-, FACodec- and HuBERT-based. 
+        <p>In this section, we ask to reconstruct expressive Samples from Expresso dataset (https://speechbot.github.io/expresso/), 
+          using the same speaker voice as the input. This tests whether the
+          expressive styles can be generalized to other samples from the same speaker.
+        </p>
+        <p> Resynthesis results from baseline systems using discrete units from Encodec-, HuBERT-
+          (both samples from https://speechbot.github.io/expresso/) and FACodec-based models are presented. 
           Encodec-based models have been directly trained with a compression objective to encode and decode
-           speech using 8 codebooks (Encodec 8). </p>
+           speech using 8 codebooks (Encodec 8). The HuBERT-based models use a pretrained HuBERT encoder: V1, the best model,       
            
-           <p>FACodec-based models use code from https://github.com/lifeiteng/naturalspeech3_facodec</p>
-
            <p>HuBERT-based models use a pretrained HuBERT encoder: V1, the best model, is trained on a mixture of read 
             and spontaneous corpora. The HuBERT embeddings (layer 12 for V1) are then followed by kmeans clustering (k=2000)
             on Expresso (E) dataset (https://github.com/facebookresearch/textlesslib/tree/main/examples/expresso/dataset).
             Finally, a HifiGAN vocoder trained on Expresso, VCTK and LJ speech converts the discrete units back to speech. 
             The vocoder is conditioned on both speaker and expression (S+E) (best model V1/2000_E/S+E).</p>
+
+            <p>FACodec-based models use code from https://github.com/lifeiteng/naturalspeech3_facodec</p>
+
         <p>Representative samples from the most difficult expressions in the dev set of the Expresso dataset are presented here,
            along with the resynthesisized outputs of our encoder/decoder models, in order to illustrate the challenges of the Expresso dataset.</p>
 
