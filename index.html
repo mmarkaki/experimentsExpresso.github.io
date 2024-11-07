@@ -25,11 +25,13 @@
   <h1>Audio Comparison</h1>
 
 </body><h3>Same Speaker Resynthesis</h3>
-        <p> Here, we present resynthesis results for two classes of models: Encodec-based and HuBERT-based. 
+        <p> Here, resynthesis results are presented for three classes of models: Encodec-, FAC0dec- and HuBERT-based. 
           Encodec-based models have been directly trained with a compression objective to encode and decode
            speech using 8 codebooks (Encodec 8). </p>
            
-           <p>HuBERT-based models use a pretrained HuBERT encoder: V1, our best model, is trained on a mixture of read 
+           <p>FACodec-based models use code from https://github.com/lifeiteng/naturalspeech3_facodec</p>
+
+           <p>HuBERT-based models use a pretrained HuBERT encoder: V1, the best model, is trained on a mixture of read 
             and spontaneous corpora. The HuBERT embeddings (layer 12 for V1) are then followed by kmeans clustering (k=2000)
             on Expresso (E) dataset (https://github.com/facebookresearch/textlesslib/tree/main/examples/expresso/dataset).
             Finally, a HifiGAN vocoder trained on Expresso, VCTK and LJ speech converts the discrete units back to speech. 
