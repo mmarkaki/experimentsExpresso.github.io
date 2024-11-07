@@ -25,10 +25,24 @@
   <h1>Audio Comparison</h1>
 
 </body><h3>Same Speaker Resynthesis</h3>
-        <p>
-            Here, the decoder is conditionned with the same speaker and style as the input speech. Resynthesized signals from Encodec and Hubert models
-            come from Expresso webpage and are compared to the original and FACodec synthesized signals.
-        </p>
+        <p> Here, we present resynthesis results for two classes of models: Encodec-based and HuBERT-based. 
+          Encodec-based models have been directly trained with a compression objective to encode and decode
+           speech using 8 codebooks (Encodec 8). </p>
+           
+           <p>HuBERT-based models use a pretrained HuBERT encoder: V1, our best model, is trained on a mixture of read 
+            and spontaneous corpora. The HuBERT embeddings (layer 12 for V1) are then followed by kmeans clustering (k=2000)
+            on Expresso (E).
+            Finally, a HifiGAN vocoder trained on Expresso, VCTK and LJ speech converts the discrete units back to speech. 
+            The vocoder is conditioned on both speaker and expression (S+E) (best model V1/2000_E/S+E).</p>
+        <p>Representative samples from the most difficult expressions in the dev set of the Expresso dataset are presented here,
+           along with the resynthesisized outputs of our encoder/decoder models, in order to illustrate the challenges of the Expresso dataset.</p>
+
+          <p> Samples are divided into Read and Conversation sections; the singing example illustrate the fact that HuBERT units do not encode pitch,
+           and many extreme pitch excursions (as in child or animal), result in voiceless renderings. In contrast, Encodec and FACodec units encode well
+            all expressions. </p>
+            <p><Here, the decoder is conditionned with the same speaker and style as the input speech. Resynthesized signals from Encodec and Hubert models
+            come from Expresso webpage and are compared to the original and FACodec synthesized signals.</p>
+
         <div class="table-responsive pt-0" id="resyn-read">
             <table style="text-align: center" class="table table-hover">
               <thead>
