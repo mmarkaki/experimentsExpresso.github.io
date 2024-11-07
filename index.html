@@ -31,7 +31,7 @@
            
            <p>HuBERT-based models use a pretrained HuBERT encoder: V1, our best model, is trained on a mixture of read 
             and spontaneous corpora. The HuBERT embeddings (layer 12 for V1) are then followed by kmeans clustering (k=2000)
-            on Expresso (E).
+            on Expresso (E) dataset (https://github.com/facebookresearch/textlesslib/tree/main/examples/expresso/dataset).
             Finally, a HifiGAN vocoder trained on Expresso, VCTK and LJ speech converts the discrete units back to speech. 
             The vocoder is conditioned on both speaker and expression (S+E) (best model V1/2000_E/S+E).</p>
         <p>Representative samples from the most difficult expressions in the dev set of the Expresso dataset are presented here,
