@@ -196,8 +196,9 @@
             Whereas HuBERT units are speaker independant and can be used to resynthetize a
             message in a target voice that is different from the input voice, Encodec units
             represent their inputs hollistically with all their acoustic characteristics
-            including voice and therefore cannot perform voice transfer. This is why we only
-            present results with Hubert  models as well as with FACodec.
+            including voice and therefore cannot perform voice transfer. Thus only results with 
+            Hubert models are compared to FACOdec which is just a Codec which tokenizes audio to RVQ
+            indexs which can be used in TTS models, like vall-e, natural speech3 or VoiceCraft and so on.
         </p>
          <div class="table-responsive pt-0" id="resyn-read">
             <table style="text-align: center" class="table table-hover">
