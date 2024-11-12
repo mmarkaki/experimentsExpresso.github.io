@@ -31,8 +31,7 @@
         </p>
         <p> Resynthesis results from baseline systems using discrete units from Encodec-, HuBERT-
           (both samples from https://speechbot.github.io/expresso/) and FACodec-based models are presented. 
-          FACOdec is just a Codec which tokenizes audio to RVQ indexs which can be used in TTS models, 
-          like vall-e, natural speech3 or VoiceCraft and so on.
+          
           Encodec-based models have been directly trained with a compression objective to encode and decode
            speech using 8 codebooks (Encodec 8). The HuBERT-based models use a pretrained HuBERT encoder: V1, the best model,       
            is trained on a mixture of read 
@@ -41,7 +40,9 @@
             Finally, a HifiGAN vocoder trained on Expresso, VCTK and LJ speech converts the discrete units back to speech. 
             The vocoder is conditioned on both speaker and expression (S+E) (best model V1/2000_E/S+E).</p>
 
-            <p>FACodec-based models use code from https://github.com/lifeiteng/naturalspeech3_facodec</p>
+            <p>FACOdec is just a Codec which tokenizes audio to RVQ indexs which can be used in TTS models, like vall-e, 
+            natural speech3 or VoiceCraft and so on. FACodec-based models use code from 
+            https://github.com/lifeiteng/naturalspeech3_facodec</p>
 
         <p>Representative samples from the most difficult expressions in the dev set of the Expresso dataset are presented here,
            along with the resynthesized outputs of our encoder/decoder models, in order to illustrate the challenges of the Expresso dataset.</p>
