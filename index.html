@@ -332,10 +332,10 @@
     </div>
 
 
-        <h3>Resynthesis with sentiment swapping - FACodec-based</h3>
+        <h3>Resynthesis with prosody swapping as a proxy for sentiment swapping - FACodec-based</h3>
         <p>
             In this section, the vocoder is asked to reconstruct an expressive sample from
-            Expresso, but using the same speaker voice from expresso dataset with sentiment from another sample from the same speaker.
+            Expresso, using the same speaker voice from expresso dataset with different sentiment from another utterance from the same speaker.
         </p>
         <div class="table-responsive pt-0" id="resyn-read">
             <table style="text-align: center" class="table table-hover">
@@ -349,21 +349,21 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex03_default_00093.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex03_happy_00093.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex03_default_to_happy.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex03_happy_to_default.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00360_gt.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_to_happy.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_to_default.wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_default_00364.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_happy_00364.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_to_happy.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_happy_to_default.wav"></audio></td>
-                </tr>
-                <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_default_00364.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_happy_00364.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_to_happy.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_default_to_happy.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_happy_to_default.wav"></audio></td>
                 </tr>
               </tbody>
@@ -377,9 +377,9 @@
               </thead>
                <tbody>
                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_sad_00360_gt.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_happy_00360_gt.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_sad_to_happy.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ex04_happy_to_sad.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_sad_00360_gt.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00364.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00360_to_happyProsodiesSwap.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_sadProsodiesSwap.wav"></audio></td>
                 </tr>
 
