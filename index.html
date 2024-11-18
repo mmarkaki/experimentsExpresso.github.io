@@ -332,7 +332,7 @@
     </div>
 
  <div class="container float-div">
-        <h3>Resynthesis with prosody swapping as a proxy for sentiment swapping - FACodec-based</h3>
+        <h3>Resynthesis with prosody swapping as a proxy for sentiment swapping - FACodec-based, either swapping prosody latents or prosody vq</h3>
         <p>
             In this section, the vocoder is asked to reconstruct an expressive sample from
             Expresso, using the same speaker voice from expresso dataset with different sentiment from SAME utterance from the same speaker.
@@ -343,89 +343,182 @@
                 <tr>
                   <th style="text-align: center">Original default</th>
                   <th style="text-align: center">Original happy</th>
-                  <th style="text-align: center">Default to happy</th>
-                  <th style="text-align: center">Happy to default </th>
+                  <th style="text-align: center">Default to happy - latents</th>
+                  <th style="text-align: center">Default to happy - vq</th>
+                  <th style="text-align: center">Happy to default - latents </th>
+                  <th style="text-align: center">Happy to default - vq </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00364.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_happy_00364_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_default_00364_ProsodiesSwap.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_default_00018.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_happy_00018.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_happy_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_happy_00018_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_default_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_default_00018_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
                 <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_default_00355.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_happy_00355.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_happy_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_happy_00355_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_default_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_default_00355_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+               <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_happy_00093.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_happy_00093_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_default_00093_ProsodiesSwap.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_happy_00093.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_happy_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_happy_00093_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_default_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_default_00093_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00364.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_happy_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_happy_00364_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_default_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_default_00364_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
               </tbody>
                <thead>
                 <tr>
                   <th style="text-align: center">Original sad</th>
                   <th style="text-align: center">Original happy</th>
-                  <th style="text-align: center">Sad to happy</th>
-                  <th style="text-align: center">Happy to sad </th>
+                  <th style="text-align: center">Sad to happy - latents</th>
+                  <th style="text-align: center">Sad to happy - vq</th>
+                  <th style="text-align: center">Happy to sad - latents</th>
+                  <th style="text-align: center">Happy to sad - vq</th>
                 </tr>
               </thead>
-               <tbody>
+              <tbody>
                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_sad_00360_gt.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00360_gt.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00360_to_happy_00360_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00360_to_sad_00360_ProsodiesSwap.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_sad_00018.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_happy_00018.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_happy_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_happy_00018_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_sad_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_sad_00018_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
-                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_sad_00354_gt.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_happy_00354_gt.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00354_to_happy_00354_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00354_to_sad_00354_ProsodiesSwap.wav"></audio></td>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_sad_00355.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_happy_00355.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_happy_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_happy_00355_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_sad_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_sad_00355_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
+               <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_sad_00093.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_happy_00093.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_happy_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_happy_00093_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_sad_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_sad_00093_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_sad_00364.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00364.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_happy_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_happy_00364_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_sad_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_sad_00364_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+              </tbody>
                 <div class="container float-div">
               </tbody>
                 <thead>
                 <tr>
                   <th style="text-align: center">Original confused</th>
                   <th style="text-align: center">Original sad</th>
-                  <th style="text-align: center">Sad to confused</th>
-                  <th style="text-align: center">Confused to sad </th>
+                  <th style="text-align: center">Confused to sad - latents</th>
+                  <th style="text-align: center">Confused to sad - vq </th>
+                  <th style="text-align: center">Sad to confused - latents </th>
+                  <th style="text-align: center">Sad to confused - latents </th>
                 </tr>
               </thead>
-               <tbody>
+              <tbody>
                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_confused_00360_gt.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_sad_00360_gt.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00360_to_confused_00360_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_confused_00360_to_sad_00360_ProsodiesSwap.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_confused_00018.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_sad_00018.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_confused_00018_to_sad_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_confused_00018_to_sad_00018_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_confused_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_confused_00018_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
-                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_sad_00354_gt.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_confused_00354_gt.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00354_to_confused_00354_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_confused_00354_to_sad_00354_ProsodiesSwap.wav"></audio></td>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_confused_00355.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_sad_00355.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_confused_00355_to_sad_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_confused_00355_to_sad_00355_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_confused_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_confused_00355_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
+               <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_happy_00093.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_sad_00093.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_sad_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_sad_00093_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_happy_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_happy_00093_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_confused_00364.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_sad_00364.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_confused_00364_to_sad_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_confused_00364_to_sad_00364_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_confused_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_confused_00364_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+              </tbody>
+               <tbody>
                   <thead>
                 <tr>
                   <th style="text-align: center">Original laughing</th>
                   <th style="text-align: center">Original happy</th>
-                  <th style="text-align: center">Laughing to happy</th>
-                  <th style="text-align: center">Happy to laughing </th>
+                  <th style="text-align: center">Laughing to happy - latents</th>
+                  <th style="text-align: center">Laughing to happy - vq</th>
+                  <th style="text-align: center">Happy to laughing - latents </th>
+                  <th style="text-align: center">Happy to laughing - vq </th>
                 </tr>
               </thead>
-               <tbody>
+              <tbody>
                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_laughing_00354_gt.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_happy_00354_gt.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_laughing_00354_to_happy_00354_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00354_to_laughing_00354_ProsodiesSwap.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_sad_00018.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_happy_00018.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_happy_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_happy_00018_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_sad_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_sad_00018_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
-                 <tr>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_laughing_00360_gt.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00360_gt.wav"></audio>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_laughing_00360_to_happy_00360_ProsodiesSwap.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00360_to_laughing_00360_ProsodiesSwap.wav"></audio></td>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_sad_00355.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_happy_00355.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_happy_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_happy_00355_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_sad_00355_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_sad_00355_ProsodiesSwapQVs.wav"></audio></td>
                 </tr>
+               <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_sad_00093.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_happy_00093.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_happy_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_happy_00093_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_sad_00093_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_sad_00093_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+                <tr>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_sad_00364.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_happy_00364.wav.wav"></audio>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_happy_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_happy_00364_ProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_sad_00364_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_sad_00364_ProsodiesSwapQVs.wav"></audio></td>
+                </tr>
+              </tbody>
+               <tbody>
                 <div class="container float-div">
               </tbody>
                 <div class="container float-div">
