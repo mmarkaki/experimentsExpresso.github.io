@@ -332,14 +332,15 @@
     </div>
 
  <div class="container float-div">
-        <h3>FACodec-based Resynthesis with prosody swapping as a proxy for sentiment swapping;swapping either prosody latents or prosody vq.
-          Also speaker embeddings swapping was added to prosody swapping (both latents and vq swapping) for comparison.
-        </h3>
+        <h3>FACodec-based Resynthesis with prosody swapping as a proxy for sentiment swapping
+          </h3>
+          <p>Swapping either prosody latents or prosody vq; also speaker embeddings swapping was added to prosody swapping (latents as well as vq prosody swapping) for comparison.
+          </p>
         <p>
             Two expressive samples from Expresso with  same speaker and same utterance but different emotion (even default) are used for swapping.
             There are 7 different emotions and 4 different speakers, 2 male, 2 female ones, corresponding to 4 different sentences. Swapping default 
             with an emotion is easier task than swapping two different emotions. Swapping is rather more successful when converting default to 
-            emotion than emotion to default.
+            emotion than emotion to default. Laughing should be preprocessed first with VAD to remove laughter before emotions swapping.
         </p>
         <div class="table-responsive pt-0" id="resyn-read">
           <table style="text-align: center" class="table table-hover">
