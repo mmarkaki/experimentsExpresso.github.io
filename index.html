@@ -332,11 +332,11 @@
     </div>
 
  <div class="container float-div">
-        <h3>Resynthesis with prosody swapping as a proxy for sentiment swapping - FACodec-based, either swapping prosody latents or prosody vq</h3>
+        <h3>FACodec-based Resynthesis with prosody swapping as a proxy for sentiment swapping;swapping either prosody latents or prosody vq</h3>
         <p>
-            In this section, the vocoder is asked to reconstruct an expressive sample from
-            Expresso, using the same speaker voice from expresso dataset with different sentiment from SAME utterance from the same speaker.
-            There are 7 different emotions and 4 different speakers, 2 male, 2 female ones, corresponding to 4 different sentences.
+            Two expressive samples from Expresso are used for swapping, which have  same speaker and same utterance, but different emotion (or default).
+            There are 7 different emotions and 4 different speakers, 2 male, 2 female ones, corresponding to 4 different sentences. Swapping default 
+            with an emotion is easier task than swapping two different emotions.
         </p>
         <div class="table-responsive pt-0" id="resyn-read">
           <table style="text-align: center" class="table table-hover">
