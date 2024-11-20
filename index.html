@@ -196,7 +196,7 @@
             the required expressive style.
         </p>
         <p>
-            Whereas HuBERT units are speaker independent and can be used to resynthetize a
+            Whereas HuBERT units are speaker independent and can be used to resynthesize a
             message in a target voice that is different from the input voice, Encodec units
             represent their inputs hollistically with all their acoustic characteristics
             including voice and therefore cannot perform voice transfer. Thus only results with 
@@ -330,6 +330,105 @@
             </table>
         </div>
     </div>
+
+ <div class="container float-div">
+        <h3>Out-of-domain Speaker Resynthesis - LibriSpeech voice transfer</h3>
+        <p>
+            In this section, the vocoder is asked to reconstruct an expressive sample from
+            Expresso, but using a speaker voice that is from LibriSpeech, and was therefore never recorded with this particular expression.
+        </p>
+        <p>
+            This tests whether the Expresso styles can be generalized outside of the small
+            set of 4 speakers to standard TTS voices. Note that the LibriSpeech voice can be made to
+            laugh and whisper and to a certain extent change it's tone of voice according to
+            the required expressive style.
+        </p>
+         <div class="table-responsive pt-0" id="resyn-read">
+            <table style="text-align: center" class="table table-hover">
+              <thead>
+                <tr>
+                  <th style="text-align: center"></th>
+                  <th style="text-align: center">Target Voice LJspeech-0001.wav</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> </td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_li/ground_truth/LJ001-0001.wav"></audio></td>
+                </tr>
+
+        <div class="table-responsive pt-0" id="resyn-read">
+            <table style="text-align: center" class="table table-hover">
+              <thead>
+                <tr>
+                  <th style="text-align: center">Style</th>
+                  <th style="text-align: center">Original</th>
+                  <th style="text-align: center">Target Libri1</th>
+                  <th style="text-align: center">FACodec-Libri1</th>
+                  <th style="text-align: center">Target Libri2</th>
+                  <th style="text-align: center">FACodec-Libri2</th>
+                  <th style="text-align: center">Target Libri3</th>
+                  <th style="text-align: center">FACodec-Libri3</th>
+                  <th style="text-align: center">Target Libri4</th>
+                  <th style="text-align: center">FACodec-Libri4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <td> default </td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/ground_truth/LibriSpeech_origin_1.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex04_default_to_Libri1_00364.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/ground_truth/LibriSpeech_origin_2.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex04_default_to_Libri2_00364.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/ground_truth/LibriSpeech_origin_3.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex04_default_to_Libri3_00364.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/ground_truth/LibriSpeech_origin_4.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex04_default_to_Libri4_00364.wav"></audio>
+                </tr>
+                <tr>
+                <td>happy</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_happy_00093.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_1.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex03_happy_to_Libri1_00093.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_2.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex03_happy_to_Libri2_00093.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_3.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex03_happy_to_Libri3_00093.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_4.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex03_happy_to_Libri4_00093.wav"></audio>
+                </tr>
+                <tr>
+                <td> sad </td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_sad_00355.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_1.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex02_sad_to_Libri1_00355.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_2.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex02_sad_to_Libri2_00355.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_3.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex02_sad_to_Libri3_00355.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_4.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex02_sad_to_Libri4_00355.wav"></audio>
+                </tr>
+                <tr>
+                <td> confused </td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex01_confused_00018.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_1.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex01_confused_to_Libri1_00018.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_2.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex01_confused_to_Libri2_00018.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_3.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex01_confused_to_Libri3_00018.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/LibriSpeech_origin_4.wav"></audio>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_libri_speaker/facodec/ex01_confused_to_Libri4_00018.wav"></audio>
+                </tr>
+                </tr>
+                <div class="container float-div">
+              </tbody>
+            </table>
+        </div>
+    </div>
+
 
  <div class="container float-div">
         <h3>FACodec-based Resynthesis with prosody swapping as a proxy for sentiment swapping
