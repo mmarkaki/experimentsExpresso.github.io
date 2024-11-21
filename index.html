@@ -540,11 +540,12 @@
           </h3>
           <p>Swapping either prosody latents or prosody vq; also speaker embeddings swapping was added to prosody swapping (latents as well as vq prosody swapping) for comparison.
           </p>
+          <p> Swapping content vq is compared too.</p>
         <p>
-            Two expressive samples from Expresso with  same speaker and same utterance but different emotion (even default) are used for swapping.
+            Two expressive samples from Expresso with  same speaker and same utterance but different emotion (or default) are used for swapping.
             There are 7 different emotions and 4 different speakers, 2 male, 2 female ones, corresponding to 4 different sentences. Swapping default 
             with an emotion is easier task than swapping two different emotions. Swapping is rather more successful when converting default to 
-            emotion than emotion to default. Laughing should be preprocessed first with VAD to remove laughter before emotions swapping.
+            emotion than when converting emotion to default. Laughing should be preprocessed first with VAD to remove laughter before swapping to default.
         </p>
         <div class="table-responsive pt-0" id="resyn-read">
           <table style="text-align: center" class="table table-hover">
@@ -556,10 +557,12 @@
                   <th style="text-align: center">Default to enunciated - latents + spkr</th>
                   <th style="text-align: center">Default to enunciated - vq</th>
                   <th style="text-align: center">Default to enunciated - vq + spkr</th>
+                  <th style="text-align: center">Default to enunciated - content vq swap</th>
                   <th style="text-align: center">Enunciated to default - latents </th>
                   <th style="text-align: center">Enunciated to default - latents + spkr</th>
                   <th style="text-align: center">Enunciated to default - vq </th>
                   <th style="text-align: center">Enunciated to default - vq + spkr </th>
+                  <th style="text-align: center">Enunciated to default - content vq swap </th>
                 </tr>
               </thead>
               <tbody>
@@ -570,10 +573,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_enunciated_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_enunciated_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_enunciated_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
-                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_enunciated_00018_to_default_00018_ProsodiesSwapLatents.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_enunciated_00018_default_00018_SwapContent.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_enunciated_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_enunciated_00018_to_default_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_enunciated_00018_to_default_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_enunciated_00018_to_default_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_enunciated_00018_default_00018_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_default_00355.wav"></audio></td>
@@ -582,10 +587,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_enunciated_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_enunciated_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_enunciated_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_enunciated_00355_default_00355_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_enunciated_00355_to_default_00355_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_enunciated_00355_to_default_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_enunciated_00355_to_default_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_enunciated_00355_to_default_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_enunciated_00355_default_00355_SwapContent.wav"></audio></td>
                 </tr>
                <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
@@ -594,10 +601,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_enunciated_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_enunciated_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_enunciated_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_enunciated_00093_default_00093_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_enunciated_00093_to_default_00093_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_enunciated_00093_to_default_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_enunciated_00093_to_default_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_enunciated_00093_to_default_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_enunciated_00093_default_00093_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
@@ -606,10 +615,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_enunciated_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_enunciated_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_enunciated_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_enunciated_00364_default_00364_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_enunciated_00364_to_default_00364_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_enunciated_00364_to_default_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_enunciated_00364_to_default_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_enunciated_00364_to_default_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_enunciated_00364_default_00364_SwapContent.wav"></audio></td>
                 </tr>
               </tbody>
               </table>  
@@ -627,10 +638,12 @@
                   <th style="text-align: center">Default to confused - latents + spkr </th>
                   <th style="text-align: center">Default to confused - vq</th>
                   <th style="text-align: center">Default to confused - vq + spkr </th>
+                  <th style="text-align: center">Default to confused - content vq swap</th>
                   <th style="text-align: center">Confused to default - latents </th>
                   <th style="text-align: center">Confused to default - latents + spkr </th>
                   <th style="text-align: center">Confused to default - vq </th>
                   <th style="text-align: center">Confused to default - vq + spkr</th>
+                  <th style="text-align: center">Confused to default - content vq swap</th>
                 </tr>
               </thead>
                <tbody>
@@ -641,10 +654,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_confused_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_confused_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_confused_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_default_00018_confused_00018_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_confused_00018_to_default_00018_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_confused_00018_to_default_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_confused_00018_to_default_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_confused_00018_to_default_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_confused_00018_default_00018_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_default_00355.wav"></audio></td>
@@ -653,10 +668,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_confused_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_confused_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_confused_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_default_00355_confused_00355_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_confused_00355_to_default_00355_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_confused_00355_to_default_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_confused_00355_to_default_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_confused_00355_to_default_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_confused_00355_default_00355_SwapContent.wav"></audio></td>
                 </tr>
                <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
@@ -665,10 +682,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_confused_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_confused_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_confused_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_default_00093_confused_00093_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_confused_00093_to_default_00093_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_confused_00093_to_default_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_confused_00093_to_default_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_confused_00093_to_default_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_confused_00093_default_00093_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
@@ -677,10 +696,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_confused_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_confused_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_confused_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_default_00364_confused_00364_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_confused_00364_to_default_00364_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_confused_00364_to_default_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_confused_00364_to_default_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_confused_00364_to_default_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_confused_00364_default_00364_SwapContent.wav"></audio></td>
                 </tr>
               </tbody>
               </table>  
@@ -696,10 +717,12 @@
                   <th style="text-align: center">Default to sad - latents + spk</th>
                   <th style="text-align: center">Default to sad - vq</th>
                   <th style="text-align: center">Default to sad - vq + spk</th>
+                  <th style="text-align: center">Default to sad - content vq swap </th>
                   <th style="text-align: center">Sad to default - latents </th>
                   <th style="text-align: center">Sad to default - latents + spk</th>
                   <th style="text-align: center">Sad to default - vq </th>
                   <th style="text-align: center">Sad to default - vq + spk</th>
+                  <th style="text-align: center">Sad to default - content vq swap</th>
                 </tr>
               </thead>
                <tbody>
@@ -710,10 +733,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_sad_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_sad_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_sad_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_default_00018_sad_00018_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_default_00018_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_default_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_default_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_sad_00018_to_default_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_sad_00018_default_00018_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_default_00355.wav"></audio></td>
@@ -722,10 +747,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_sad_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_sad_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_sad_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_default_00355_sad_00355_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_default_00355_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_default_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_default_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_sad_00355_to_default_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_sad_00355_default_00355_SwapContent.wav"></audio></td>
                 </tr>
                <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
@@ -734,10 +761,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_sad_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_sad_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_sad_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_default_00093_sad_00093_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_default_00093_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_default_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_default_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_sad_00093_to_default_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_sad_00093_default_00093_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
@@ -746,10 +775,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_sad_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_sad_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_sad_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_default_00364_sad_00364_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_default_00364_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_default_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_default_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_sad_00364_to_default_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_sad_00364_default_00364_SwapContent.wav"></audio></td>
                 </tr>
               </tbody>
               </table>
@@ -766,10 +797,12 @@
                   <th style="text-align: center">Default to laughing - latents + spkr</th>
                   <th style="text-align: center">Default to laughing - vq</th>
                   <th style="text-align: center">Default to laughing - vq + spkr</th>
+                  <th style="text-align: center">Default to laughing - content vq swap</th>
                   <th style="text-align: center">Laughing to default - latents </th>
                   <th style="text-align: center">Laughing to default - latents + spkr </th>
                   <th style="text-align: center">Laughing to default - vq </th>
                   <th style="text-align: center">Laughing to default - vq +spkr</th>
+                  <th style="text-align: center">Laughing to default - content vq swap</th>
                 </tr>
               </thead>
                <tbody>
@@ -780,10 +813,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_laughing_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_laughing_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_laughing_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_default_00018_laughing_00018_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_laughing_00018_to_default_00018_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_laughing_00018_to_default_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_laughing_00018_to_default_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_laughing_00018_to_default_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_laughing_00018_default_00018_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_default_00355.wav"></audio></td>
@@ -792,10 +827,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_laughing_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_laughing_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_laughing_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_default_00355_laughing_00355_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_laughing_00355_to_default_00355_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_laughing_00355_to_default_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_laughing_00355_to_default_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_laughing_00355_to_default_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_laughing_00355_default_00355_SwapContent.wav"></audio></td>
                 </tr>
                <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
@@ -835,10 +872,12 @@
                   <th style="text-align: center">Default to whisper - latents + spkr</th>
                   <th style="text-align: center">Default to whisper - vq</th>
                   <th style="text-align: center">Default to whisper - vq + spkr</th>
+                  <th style="text-align: center">Default to whisper - content vq swap</th>
                   <th style="text-align: center">Whisper to default - latents </th>
                   <th style="text-align: center">Whisper to default - latents + spkr</th>
                   <th style="text-align: center">Whisper to default - vq </th>
                   <th style="text-align: center">Whisper to default - vq + spkr</th>
+                  <th style="text-align: center">Whisper to default - content vq swap</th>
                 </tr>
               </thead>
                <tbody>
@@ -849,10 +888,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_whisper_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_whisper_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_whisper_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_default_00018_whisper_00018_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_whisper_00018_to_default_00018_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_whisper_00018_to_default_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_whisper_00018_to_default_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_whisper_00018_to_default_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_whisper_00018_default_00018_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_default_00355.wav"></audio></td>
@@ -861,10 +902,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_whisper_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_whisper_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_whisper_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_default_00355_whisper_00355_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_whisper_00355_to_default_00355_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_whisper_00355_to_default_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_whisper_00355_to_default_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_whisper_00355_to_default_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_whisper_00355_default_00355_SwapContent.wav"></audio></td>
                 </tr>
                <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
@@ -873,10 +916,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_whisper_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_whisper_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_whisper_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_default_00093_whisper_00093_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_whisper_00093_to_default_00093_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_whisper_00093_to_default_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_whisper_00093_to_default_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_whisper_00093_to_default_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_whisper_00093_default_00093_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
@@ -885,10 +930,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_whisper_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_whisper_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_whisper_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_default_00364_whisper_00364_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_whisper_00364_to_default_00364_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_whisper_00364_to_default_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_whisper_00364_to_default_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_whisper_00364_to_default_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_whisper_00364_default_00364_SwapContent.wav"></audio></td>
                 </tr>
               </tbody>
               </table>
@@ -902,10 +949,12 @@
                   <th style="text-align: center">Default to happy - latents + spkr</th>
                   <th style="text-align: center">Default to happy - vq</th>
                   <th style="text-align: center">Default to happy - vq + spkr</th>
+                  <th style="text-align: center">Default to happy - content vq swap</th>
                   <th style="text-align: center">Happy to default - latents </th>
                   <th style="text-align: center">Happy to default - latents + spkr</th>
                   <th style="text-align: center">Happy to default - vq </th>
                   <th style="text-align: center">Happy to default - vq + spkr</th>
+                  <th style="text-align: center">Happy to default - content vq swap</th>
                 </tr>
               </thead>
              
@@ -917,10 +966,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_happy_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_happy_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_default_00018_to_happy_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_default_00018_happy_00018_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_default_00018_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_default_00018_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_default_00018_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex01_happy_00018_to_default_00018_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex01_happy_00018_default_00018_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex02_default_00355.wav"></audio></td>
@@ -929,10 +980,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_happy_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_happy_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_default_00355_to_happy_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_default_00355_happy_00355_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_default_00355_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_default_00355_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_default_00355_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex02_happy_00355_to_default_00355_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex02_happy_00355_default_00355_SwapContent.wav"></audio></td>
                 </tr>
                <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex03_default_00093.wav"></audio></td>
@@ -941,10 +994,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_happy_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_happy_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_default_00093_to_happy_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_default_00093_happy_00093_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_default_00093_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_default_00093_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_default_00093_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex03_happy_00093_to_default_00093_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex03_happy_00093_default_00093_SwapContent.wav"></audio></td>
                 </tr>
                 <tr>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/ground_truth/ex04_default_00364.wav"></audio></td>
@@ -953,10 +1008,12 @@
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_happy_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_happy_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_default_00364_to_happy_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_default_00364_happy_00364_SwapContent.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_default_00364_ProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_default_00364_SpeakersProsodiesSwapLatents.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_default_00364_ProsodiesSwapQVs.wav"></audio></td>
                   <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_sentiment/facodec/ex04_happy_00364_to_default_00364_SpeakersProsodiesSwapQVs.wav"></audio></td>
+                  <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/resynthesis/swap_content/facodec/ex04_happy_00364_default_00364_SwapContent.wav"></audio></td>
                 </tr>
               </tbody>
                <thead>
