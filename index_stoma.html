@@ -1,0 +1,143 @@
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Dynamic Speech Generation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .audio-sample {
+      margin-bottom: 20px;
+    }
+    .audio-sample h3 {
+      margin-bottom: 5px;
+    }
+    audio {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>  Dynamic Speech Generation to Enhance Intelligibility in Noisy Environments</h1>
+  <h3>Tested Vocoders</h3>
+
+ <p> Four systems were trained and then compared: </p>
+	 <p>1. Baseline waveRNN (BL): Refers to the state-of-the-art waveRNN vocoder.</p>
+		
+	 	<p>2. Post-processed enhancement of BL generated speech (BL-post): 
+            The generated speech from the BL model is enhanced by a fixed amount modification of the spectral tilt. 
+            This is achieved by minimizing the log-likelihood between the glimpse profile of the speech signal and the model’s
+             learned distribution at -10 dB SNR level.
+        </p>
+		
+        <p>
+	 	3. Environment-aware waveRNN (EA λ=0): The proposed noise-conditioning vocoder with λ=0 (no extra loss term).
+        </p>
+		
+        <p>
+	 	4. Environment-aware waveRNN with intelligibility-enhancing loss term (EA λ=1): Similar to the previous model with an extra term in the loss function.
+        </p>
+<br>
+        <p>
+Systems 1 and 2 were trained exclusively with the untilted dataset, while the last two systems incorporated both the tilted and untilted dataset.
+        </p>
+	 
+
+<br>
+
+<p> </p>
+
+<p> </p>
+
+<div class="table-responsive pt-3" id="resyn-read">
+            <table style="text-align: center" class="table table-hover">
+              <thead>
+                <tr>
+                  <th style="text-align: center">sample-id</th>
+                  <th style="text-align: center">SNR</th>
+                  <th style="text-align: center">BL </th>
+                  <th style="text-align: center">BL-post</th>
+                  <th style="text-align: center">EA λ=0</th>
+                  <th style="text-align: center">EA λ=1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <td>LJ002-0166</td>
+                <td>-10dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/post_wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/ea_basic/['LJ002-0166']_gen['m10dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/ea_ext/['LJ002-0166']_gen['m10dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                <td>LJ004-0215</td>
+                <td>-10dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/post_wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/ea_basic/['LJ004-0215']_gen['m10dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m10/ea_ext/['LJ004-0215']_gen['m10dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                <td>LJ002-0166</td>
+                <td>-7.5dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/post_wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/ea_basic/['LJ002-0166']_361_gen['m7_5dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/ea_ext/['LJ002-0166']_gen['m7_5dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                <td>LJ004-0215</td>
+                <td>-7.5dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/post_wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/ea_basic/['LJ004-0215']_377_gen['m7_5dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m7_5/ea_ext/['LJ004-0215']_gen['m7_5dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                <td>LJ002-0166</td>
+                <td>-2dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/post_wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/ea_basic/['LJ002-0166']_gen['m2dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/ea_ext/['LJ002-0166']_gen['m2dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                <td>LJ004-0215</td>
+                <td>-2dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/post_wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/ea_basic/['LJ004-0215']_gen['m2dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/m2/ea_ext/['LJ004-0215']_gen['m2dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                <td>LJ002-0166</td>
+                <td>6dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/post_wRNN/['LJ002-0166']_45.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/ea_basic/['LJ002-0166']_355_gen['6dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/ea_ext/['LJ002-0166']_gen['6dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                <td>LJ004-0215</td>
+                <td>6dB</td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/post_wRNN/['LJ004-0215']_47.wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/ea_basic/['LJ004-0215']_371_gen['6dB'].wav"></audio></td>
+                <td><audio controls="" controlslist="nodownload" class="small-audio" src="audio/6/ea_ext/['LJ004-0215']_gen['6dB'].wav"></audio></td>
+                </tr>
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
